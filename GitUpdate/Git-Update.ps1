@@ -19,6 +19,7 @@ function Git-Update{
             }
         }
     }
+    Write-Host "`r`nGIT STATUS:`r`n"
     git status
     # new line : `r`n for ` use Alt+96
     Write-Host "`r`nFuntion parameters: `r`n-r for repo name`r`n-f for file to be added`r`n-c for the comment`r`n-p Y/N for pushing the files.`r`n"

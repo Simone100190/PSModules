@@ -3,13 +3,13 @@ function Git-Update{
         [string] $r = "THIS", # repository name
         $f = "STATUS", # file to be added
         [string] $c, # git comment 
-        [bool] $p = $false # push yes or no
+        [bool] $p = "N" # push yes or no
         )
     if ($f -ne "STATUS")
     {
         git add $f
         git commit -m $c
-        if ($p)
+        if ($p -eq "Y")
         {
             if ($r -eq "THIS")
             {
@@ -21,7 +21,7 @@ function Git-Update{
     }
     git status
     # new line : `r`n for ` use Alt+96
-    Write-Host "`r`nFuntion parameters: `r`n-r for repo name`r`n-f for file to be added`r`n-c for the comment`r`n-p true/false for pushing the files.`r`n"
+    Write-Host "`r`nFuntion parameters: `r`n-r for repo name`r`n-f for file to be added`r`n-c for the comment`r`n-p Y/N for pushing the files.`r`n"
 }
 
 #     param(

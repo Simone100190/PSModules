@@ -3,7 +3,7 @@ function Git-Update{
         [string] $r = "THIS", # repository name
         $f = "STATUS", # file to be added
         [string] $c, # git comment 
-        [bool] $p = "N" # push yes or no
+        [string] $p = "N" # push yes or no
         )
     if ($f -ne "STATUS")
     {
